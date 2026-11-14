@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dlyahekjt0kqg"]
+
+[ext_resource type="Script" uid="uid://cm512f440pc4e" path="res://disk.gd" id="1_gjtnm"]
+[ext_resource type="Texture2D" uid="uid://b0bvd73d01k8l" path="res://sprites/triangle/triangle1.png" id="2_er6f6"]
+[ext_resource type="Texture2D" uid="uid://c0p66t82f1f0d" path="res://sprites/triangle/triangle2.png" id="3_iemq4"]
+[ext_resource type="Texture2D" uid="uid://d21d0w4d0vmfi" path="res://sprites/triangle/triangle3.png" id="4_5qg3x"]
+[ext_resource type="Texture2D" uid="uid://cctbogj2rflxx" path="res://sprites/triangle/triangle4.png" id="5_5pas7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7q7vv"]
+radius = 8.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gjtnm"]
+animations = [{
+"frames": [{
+"duration": 0.2,
+"texture": ExtResource("2_er6f6")
+}, {
+"duration": 0.2,
+"texture": ExtResource("3_iemq4")
+}, {
+"duration": 0.2,
+"texture": ExtResource("4_5qg3x")
+}, {
+"duration": 0.2,
+"texture": ExtResource("5_5pas7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Disk" type="CharacterBody2D" unique_id=901684015]
+collision_layer = 4
+motion_mode = 1
+script = ExtResource("1_gjtnm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=456186994]
+shape = SubResource("CircleShape2D_7q7vv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1333183751]
+sprite_frames = SubResource("SpriteFrames_gjtnm")
+autoplay = "default"
