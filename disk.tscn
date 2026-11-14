@@ -30,7 +30,7 @@ animations = [{
 }]
 
 [node name="Disk" type="CharacterBody2D" unique_id=901684015]
-collision_layer = 4
+collision_layer = 8
 motion_mode = 1
 script = ExtResource("1_gjtnm")
 

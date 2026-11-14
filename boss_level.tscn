@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://dyd5hwf2ek2f1"]
+
+[ext_resource type="Texture2D" uid="uid://clrcboicd1wt0" path="res://sprites/evil-guy/punch-down/punch-down-1.jpg" id="1_ifhwq"]
+[ext_resource type="Texture2D" uid="uid://ccv25xm4bfqsu" path="res://sprites/evil-guy/mog/mog1.jpg" id="2_xpypf"]
+[ext_resource type="Texture2D" uid="uid://em53w1c0jdqj" path="res://sprites/evil-guy/mog/mog2.jpg" id="3_bius0"]
+[ext_resource type="Texture2D" uid="uid://bk1br4lnw4eii" path="res://sprites/evil-guy/mog/mog3.jpg" id="4_mmy8h"]
+[ext_resource type="Texture2D" uid="uid://c06cfqnwpmg3h" path="res://sprites/evil-guy/mog/mog4.jpg" id="5_vpftk"]
+[ext_resource type="Texture2D" uid="uid://cml3s7qn17cp2" path="res://sprites/evil-guy/punch-down/punch-down-2.jpg" id="6_5nksr"]
+[ext_resource type="Texture2D" uid="uid://ca65b7ai4bwtm" path="res://sprites/evil-guy/punch-down/punch-down-3.jpg" id="7_ymrob"]
+[ext_resource type="Texture2D" uid="uid://bh74ejcr0df0g" path="res://sprites/evil-guy/punch-down/punch-down-4.jpg" id="8_1jtig"]
+[ext_resource type="Texture2D" uid="uid://dm3x1fe4d358j" path="res://sprites/evil-guy/punch-down/punch-down-5.jpg" id="9_go68q"]
+[ext_resource type="Texture2D" uid="uid://hlr238qmwmjl" path="res://sprites/evil-guy/punch-down/punch-down-6.jpg" id="10_xkr70"]
+[ext_resource type="Texture2D" uid="uid://b6x7fdvch2umn" path="res://sprites/evil-guy/punch-down/punch-down-7.jpg" id="11_fpd22"]
+[ext_resource type="Texture2D" uid="uid://db21qrlj6bom7" path="res://sprites/evil-guy/punch-middle/punch-middle-1.jpg" id="12_a62ac"]
+[ext_resource type="Texture2D" uid="uid://bnr8n0cluaif0" path="res://sprites/evil-guy/punch-middle/punch-middle-2.jpg" id="13_627od"]
+[ext_resource type="Texture2D" uid="uid://cnk7lqkhwe3y" path="res://sprites/evil-guy/punch-middle/punch-middle-3.jpg" id="14_plomp"]
+[ext_resource type="Texture2D" uid="uid://dil7kfq4tg21c" path="res://sprites/evil-guy/punch-middle/punch-middle-4.jpg" id="15_2hb0c"]
+[ext_resource type="Texture2D" uid="uid://cavqntt4qdufd" path="res://sprites/evil-guy/punch-up/punch-up-1.jpg" id="16_nogaf"]
+[ext_resource type="Texture2D" uid="uid://bb1lesyfjc1o6" path="res://sprites/evil-guy/punch-up/punch-up-2.jpg" id="17_hfd85"]
+[ext_resource type="Texture2D" uid="uid://b3wyd7fsgm8sf" path="res://sprites/evil-guy/punch-up/punch-up-3.jpg" id="18_0qrxe"]
+[ext_resource type="Texture2D" uid="uid://b63or15e7xe3f" path="res://sprites/evil-guy/punch-up/punch-up-4.jpg" id="19_blu8k"]
+[ext_resource type="Texture2D" uid="uid://ced7wf4hdnhg5" path="res://sprites/evil-guy/punch-up/punch-up-5.jpg" id="20_71f65"]
+[ext_resource type="Script" uid="uid://d0x022dko5lgy" path="res://boss.gd" id="21_xutiu"]
+[ext_resource type="PackedScene" uid="uid://dx2miamulub26" path="res://player.tscn" id="22_1atdj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mubff"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ifhwq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("2_xpypf")
+}, {
+"duration": 0.5,
+"texture": ExtResource("3_bius0")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_mmy8h")
+}, {
+"duration": 0.5,
+"texture": ExtResource("5_vpftk")
+}, {
+"duration": 0.5,
+"texture": ExtResource("4_mmy8h")
+}, {
+"duration": 0.5,
+"texture": ExtResource("5_vpftk")
+}],
+"loop": false,
+"name": &"intro",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("2_xpypf")
+}, {
+"duration": 0.5,
+"texture": ExtResource("3_bius0")
+}, {
+"duration": 0.5,
+"texture": ExtResource("4_mmy8h")
+}, {
+"duration": 0.5,
+"texture": ExtResource("5_vpftk")
+}],
+"loop": false,
+"name": &"mog",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("1_ifhwq")
+}, {
+"duration": 0.5,
+"texture": ExtResource("6_5nksr")
+}, {
+"duration": 0.5,
+"texture": ExtResource("7_ymrob")
+}, {
+"duration": 0.5,
+"texture": ExtResource("8_1jtig")
+}, {
+"duration": 0.5,
+"texture": ExtResource("9_go68q")
+}, {
+"duration": 0.5,
+"texture": ExtResource("10_xkr70")
+}, {
+"duration": 0.5,
+"texture": ExtResource("11_fpd22")
+}],
+"loop": false,
+"name": &"punch-down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("12_a62ac")
+}, {
+"duration": 0.5,
+"texture": ExtResource("13_627od")
+}, {
+"duration": 0.5,
+"texture": ExtResource("14_plomp")
+}, {
+"duration": 0.5,
+"texture": ExtResource("15_2hb0c")
+}],
+"loop": false,
+"name": &"punch-middle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("16_nogaf")
+}, {
+"duration": 0.5,
+"texture": ExtResource("17_hfd85")
+}, {
+"duration": 0.5,
+"texture": ExtResource("18_0qrxe")
+}, {
+"duration": 0.5,
+"texture": ExtResource("19_blu8k")
+}, {
+"duration": 0.5,
+"texture": ExtResource("20_71f65")
+}],
+"loop": false,
+"name": &"punch-up",
+"speed": 5.0
+}]
+
+[node name="BossLevel" type="Node2D" unique_id=1325687519]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=337667479]
+position = Vector2(160, 120)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_mubff")
+animation = &"intro"
+autoplay = "intro"
+script = ExtResource("21_xutiu")
+
+[node name="Player" parent="." unique_id=868419837 instance=ExtResource("22_1atdj")]
+position = Vector2(160, 207)

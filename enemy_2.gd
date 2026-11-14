@@ -22,3 +22,7 @@ func _physics_process(delta: float) -> void:
 		orientation = orientation.bounce(get_wall_normal())
 	velocity = orientation * SPEED
 	move_and_slide()
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	queue_free()

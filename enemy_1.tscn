@@ -11,8 +11,16 @@ collision_layer = 4
 motion_mode = 1
 script = ExtResource("1_pjquw")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=849270139]
+texture = ExtResource("2_663o1")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=512926585]
 shape = SubResource("RectangleShape2D_ovk8a")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=849270139]
-texture = ExtResource("2_663o1")
+[node name="Area2D" type="Area2D" parent="." unique_id=1166056972]
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=243100219]
+shape = SubResource("RectangleShape2D_ovk8a")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

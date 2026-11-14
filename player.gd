@@ -6,7 +6,7 @@ const JUMP_VELOCITY = -400.0
 
 const DISK = preload("uid://dlyahekjt0kqg")
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_vector("left", "right", "up", "down")
