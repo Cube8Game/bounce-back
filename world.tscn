@@ -39,6 +39,7 @@ shape = SubResource("WorldBoundaryShape2D_f3sb7")
 shape = SubResource("WorldBoundaryShape2D_tlwt5")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1597998808]
+position = Vector2(0, 1)
 shape = SubResource("WorldBoundaryShape2D_aqk2v")
 
 [node name="Player" parent="." unique_id=868419837 instance=ExtResource("1_f3sb7")]
@@ -53,3 +54,8 @@ position = Vector2(90, 136)
 [node name="Song" type="AudioStreamPlayer" parent="." unique_id=2113417549]
 stream = ExtResource("4_aqk2v")
 autoplay = true
+
+[node name="Timer" type="Timer" parent="." unique_id=1722543700]
+
+[connection signal="die" from="Enemy2" to="." method="_on_enemy_2_die"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
